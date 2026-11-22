@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#18191e">
+<title>戲劇音樂播放台</title>
+<link rel="stylesheet" href="app.css">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="戲劇音樂播放台">
+</head>
+<body>
+<header id="top">
+  <div class="brand"><span class="t">戲劇音樂播放台</span><span class="ver" id="ver"></span></div>
+  <button id="sceneBtn" class="scene"></button>
+  <div class="topbtns">
+    <button id="stopAll" class="b red">■ 全部停止</button>
+    <button id="fadeAll" class="b purple">全部淡出</button>
+    <button id="layoutBtn" class="b icon" aria-label="切換版面">⊞</button>
+    <button id="setBtn" class="b icon" aria-label="設定">⚙</button>
+  </div>
+</header>
+
+<main id="tracks"></main>
+
+<footer id="sebar">
+  <div class="sehead">
+    <span class="lbl">音效</span><span class="hint">按一下播放／再按暫停，長按停止</span>
+    <span class="sp"></span>
+    <span class="hint" id="sevolLbl"></span>
+    <input type="range" id="sevol" min="0" max="100">
+    <button id="seStop" class="b small">■ 停止音效</button>
+    <button id="seSet" class="b small">⚙ 音效設定</button>
+  </div>
+  <div id="segrid"></div>
+</footer>
+
+<div id="videoLayer" hidden><div id="videoBox"></div><button id="videoClose" class="b red">✕ 關閉影片</button></div>
+<div id="modal" hidden><div class="sheet" id="sheet"></div></div>
+<div id="toast" hidden></div>
+<input type="file" id="filePick" hidden>
+
+<script src="jszip.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
